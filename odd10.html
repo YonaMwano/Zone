@@ -1,0 +1,132 @@
+<html>
+<head>
+    <title>Daily 10+ Odds</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+        .loader {
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #3498db;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-sans">
+    <!-- Loader -->
+    <div id="loader" class="flex items-center justify-center h-screen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="mainContent" class="hidden">
+        <div class="max-w-md mx-auto">
+            <!-- Header -->
+            <div class="flex items-center justify-between p-4 bg-gray-900">
+                <i class="fas fa-arrow-left text-xl cursor-pointer" onclick="history.back()"></i>
+                <h1 class="text-xl font-bold">Daily 10+ Odds</h1>
+                <i class="fas fa-bars text-xl cursor-pointer" onclick="toggleMenu()"></i>
+            </div>
+
+            <!-- Navigation Menu -->
+            <div id="navMenu" class="hidden bg-gray-800 p-4">
+                <ul>
+                    <li class="py-2"><a href="#" class="text-white">Home</a></li>
+                    <li class="py-2"><a href="#" class="text-white">Matches</a></li>
+                    <li class="py-2"><a href="#" class="text-white">Settings</a></li>
+                </ul>
+            </div>
+
+            <!-- Date -->
+            <div class="bg-gray-800 p-4">
+                <div class="flex items-center justify-between">
+                    <span class="text-lg">26.02.2025</span>
+                    <div class="border-t border-yellow-500 flex-grow mx-2"></div>
+                </div>
+            </div>
+
+            <!-- Matches -->
+            <div class="space-y-4 p-4">
+                <!-- Match 1 -->
+                <div class="bg-gray-800 p-4 rounded">
+                    <div class="flex items-center justify-between mb-2">
+                        <span>23:15</span>
+                        <span>England: Premier League</span>
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span>Liverpool</span>
+                        <span class="text-xl">0-0</span>
+                        <span>Newcastle</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-green-500">Over+ 2.5 Goals</span>
+                        <span class="bg-yellow-500 text-black px-2 py-1 rounded">1.50</span>
+                    </div>
+                </div>
+
+                <!-- Match 2 -->
+                <div class="bg-gray-800 p-4 rounded">
+                    <div class="flex items-center justify-between mb-2">
+                        <span>23:10</span>
+                        <span>France: Coupe de France</span>
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span>Stade Briochin</span>
+                        <span class="text-xl">0-0</span>
+                        <span>PSG</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-green-500">Over+ 2.5 Goals</span>
+                        <span class="bg-yellow-500 text-black px-2 py-1 rounded">1.40</span>
+                    </div>
+                </div>
+
+                <!-- Match 3 -->
+                <div class="bg-gray-800 p-4 rounded">
+                    <div class="flex items-center justify-between mb-2">
+                        <span>23:00</span>
+                        <span>Italy: Coppa Italia</span>
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span>Juventus</span>
+                        <span class="text-xl">0-0</span>
+                        <span>Empoli</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-green-500">Juventus Over+ 1.5 Goals</span>
+                        <span class="bg-yellow-500 text-black px-2 py-1 rounded">1.45</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('navMenu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        }
+
+        window.onload = function() {
+            document.getElementById('loader').style.display = 'none';
+            document.getElementById('mainContent').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
