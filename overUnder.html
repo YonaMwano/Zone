@@ -8,11 +8,11 @@
             display: none;
         }
         .loader {
-            border: 16px solid #f3f3f3;
-            border-top: 16px solid #3498db;
+            border: 20px solid #f3f3f3;
+            border-top: 20px solid #3498db;
             border-radius: 50%;
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
             animation: spin 2s linear infinite;
         }
         @keyframes spin {
@@ -21,92 +21,92 @@
         }
     </style>
 </head>
-<body class="bg-black text-white font-sans">
+<body class="bg-black text-white font-sans h-screen overflow-hidden">
     <!-- Loader -->
     <div id="loader" class="flex items-center justify-center h-screen">
         <div class="loader"></div>
     </div>
 
     <!-- Main Content -->
-    <div id="mainContent" class="hidden">
-        <div class="max-w-md mx-auto">
+    <div id="mainContent" class="hidden h-full flex flex-col">
+        <div class="flex-grow">
             <!-- Header -->
-            <div class="flex items-center justify-between p-4 bg-gray-900">
-                <i class="fas fa-arrow-left text-xl cursor-pointer" onclick="history.back()"></i>
-                <h1 class="text-xl font-bold">Daily 10+ Odds</h1>
-                <i class="fas fa-bars text-xl cursor-pointer" onclick="toggleMenu()"></i>
+            <div class="flex items-center justify-between p-8 bg-gray-900">
+                <i class="fas fa-arrow-left text-4xl cursor-pointer" onclick="history.back()"></i>
+                <h1 class="text-4xl font-bold">Daily 10+ Odds</h1>
+                <i class="fas fa-bars text-4xl cursor-pointer" onclick="toggleMenu()"></i>
             </div>
 
             <!-- Navigation Menu -->
-            <div id="navMenu" class="hidden bg-gray-800 p-4">
+            <div id="navMenu" class="hidden bg-gray-800 p-8">
                 <ul>
-                    <li class="py-2"><a href="#" class="text-white">Home</a></li>
-                    <li class="py-2"><a href="#" class="text-white">Matches</a></li>
-                    <li class="py-2"><a href="#" class="text-white">Settings</a></li>
+                    <li class="py-4"><a href="#" class="text-white text-2xl">Home</a></li>
+                    <li class="py-4"><a href="#" class="text-white text-2xl">Matches</a></li>
+                    <li class="py-4"><a href="#" class="text-white text-2xl">Settings</a></li>
                 </ul>
             </div>
 
             <!-- Date -->
-            <div class="bg-gray-800 p-4">
+            <div class="bg-gray-800 p-8">
                 <div class="flex items-center justify-between">
-                    <span class="text-lg">26.02.2025</span>
-                    <div class="border-t border-yellow-500 flex-grow mx-2"></div>
+                    <span class="text-3xl">26.02.2025</span>
+                    <div class="border-t border-yellow-500 flex-grow mx-4"></div>
                 </div>
             </div>
 
             <!-- Matches -->
-            <div class="space-y-4 p-4">
+            <div class="space-y-8 p-8 flex-grow overflow-auto">
                 <!-- Match 1 -->
-                <div class="bg-gray-800 p-4 rounded">
-                    <div class="flex items-center justify-between mb-2">
-                        <span>23:15</span>
-                        <span>England: Premier League</span>
-                        <i class="fas fa-clock"></i>
+                <div class="bg-gray-800 p-8 rounded">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-2xl">23:15</span>
+                        <span class="text-2xl">England: Premier League</span>
+                        <i class="fas fa-clock text-2xl"></i>
                     </div>
-                    <div class="flex items-center justify-between mb-2">
-                        <span>Liverpool</span>
-                        <span class="text-xl">0-0</span>
-                        <span>Newcastle</span>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-4xl">Liverpool</span>
+                        <span class="text-4xl">Vs</span>
+                        <span class="text-4xl">Newcastle</span>
                     </div>
                     <div class="flex items-center justify-between">
-                        <span class="text-green-500">Over+ 2.5 Goals</span>
-                        <span class="bg-yellow-500 text-black px-2 py-1 rounded">1.50</span>
+                        <span class="text-green-500 text-2xl">Over+ 2.5 Goals</span>
+                        <span class="bg-yellow-500 text-black px-4 py-2 rounded text-2xl">1.50</span>
                     </div>
                 </div>
 
                 <!-- Match 2 -->
-                <div class="bg-gray-800 p-4 rounded">
-                    <div class="flex items-center justify-between mb-2">
-                        <span>23:10</span>
-                        <span>France: Coupe de France</span>
-                        <i class="fas fa-clock"></i>
+                <div class="bg-gray-800 p-8 rounded">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-2xl">23:10</span>
+                        <span class="text-2xl">France: Coupe de France</span>
+                        <i class="fas fa-clock text-2xl"></i>
                     </div>
-                    <div class="flex items-center justify-between mb-2">
-                        <span>Stade Briochin</span>
-                        <span class="text-xl">0-0</span>
-                        <span>PSG</span>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-4xl">Stade Briochin</span>
+                        <span class="text-4xl">Vs</span>
+                        <span class="text-4xl">PSG</span>
                     </div>
                     <div class="flex items-center justify-between">
-                        <span class="text-green-500">Over+ 2.5 Goals</span>
-                        <span class="bg-yellow-500 text-black px-2 py-1 rounded">1.40</span>
+                        <span class="text-green-500 text-2xl">Over+ 2.5 Goals</span>
+                        <span class="bg-yellow-500 text-black px-4 py-2 rounded text-2xl">1.40</span>
                     </div>
                 </div>
 
                 <!-- Match 3 -->
-                <div class="bg-gray-800 p-4 rounded">
-                    <div class="flex items-center justify-between mb-2">
-                        <span>23:00</span>
-                        <span>Italy: Coppa Italia</span>
-                        <i class="fas fa-clock"></i>
+                <div class="bg-gray-800 p-8 rounded">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-2xl">23:00</span>
+                        <span class="text-2xl">Italy: Coppa Italia</span>
+                        <i class="fas fa-clock text-2xl"></i>
                     </div>
-                    <div class="flex items-center justify-between mb-2">
-                        <span>Juventus</span>
-                        <span class="text-xl">0-0</span>
-                        <span>Empoli</span>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-4xl">Juventus</span>
+                        <span class="text-4xl">Vs</span>
+                        <span class="text-4xl">Empoli</span>
                     </div>
                     <div class="flex items-center justify-between">
-                        <span class="text-green-500">Juventus Over+ 1.5 Goals</span>
-                        <span class="bg-yellow-500 text-black px-2 py-1 rounded">1.45</span>
+                        <span class="text-green-500 text-2xl">Juventus Over+ 1.5 Goals</span>
+                        <span class="bg-yellow-500 text-black px-4 py-2 rounded text-2xl">1.45</span>
                     </div>
                 </div>
             </div>
